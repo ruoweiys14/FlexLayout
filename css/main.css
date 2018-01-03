@@ -1,0 +1,150 @@
+h2{
+	padding-left: 10px;
+}
+.flex {
+	display: flex;
+	flex-direction: row;
+	border: 1px solid transparent;
+	margin: 5px;
+}
+.box {
+	display: flex;
+	border: 1px solid #ccc;
+	margin: 0 5px;
+	width: 200px;
+}
+.box-item{
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background-color: pink;
+	color: white;
+	text-align: center;
+	margin: 5px;
+}
+
+/* 主轴排列方向 */
+.direction .box1{
+	flex-direction: row;
+}
+.direction .box2 {
+	flex-direction: row-reverse;
+}
+.direction .box3{
+	flex-direction: column;
+}
+.direction .box4{
+	flex-direction: column-reverse;
+}
+/* 项目在轴线上换行 */
+.wrap .box-item{
+	border-radius: 50%;
+}
+.wrap .box1{
+	flex-wrap: nowrap;
+}
+.wrap .box2 {
+	flex-wrap: wrap;
+}
+.wrap .box3{
+	flex-wrap: wrap-reverse;
+}
+
+/* 主轴对齐方式 */
+/*.justify .box{
+	width: 200px;
+}*/
+
+.justify .box1{
+	justify-content: flex-start;
+}
+.justify .box2 {
+	justify-content: flex-end;
+}
+.justify .box3{
+	justify-content: center;
+}
+.justify .box4{
+	justify-content: space-between;
+}
+.justify .box5{
+	justify-content: space-around;
+}
+
+/* 项目在交叉轴对齐 */
+.align .box-item{
+	text-decoration: underline;
+}
+.align .box1{
+	align-items: flex-start;
+}
+.align .box2 {
+	align-items: flex-end;
+}
+.align .box3{
+	align-items: center;
+}
+.align .box4{
+	align-items: baseline;
+}
+.align .box5{
+	align-items: stretch;
+}
+.align .box .box-item:nth-child(2), .align .box .box-item:nth-child(4){
+	height: 100px;
+	line-height: 100px;
+	font-size: 32px;
+}
+.align .box5 .box-item:nth-child(1), .align .box5 .box-item:nth-child(3){
+	height: auto;
+}
+
+/* 项目在主轴和交叉轴的对齐方式 */
+.alignContent .box{
+	flex-wrap: wrap;
+    height: 150px;
+}
+.alignContent .box1{
+	align-content: flex-start;
+}
+.alignContent .box2 {
+	align-content: flex-end;
+}
+.alignContent .box3{
+	align-content: center;
+}
+.alignContent .box4{
+	align-content: space-between;
+}
+.alignContent .box5{
+	align-content: space-around;
+}
+.alignContent .box6{
+	align-content: stretch;
+}
+.alignContent .box6 .box-item{
+	height: auto;
+}
+
+/* flex-grow属性定义项目的放大比例 */
+.grow .box-item:nth-child(1), .grow .box-item:nth-child(3){
+	flex-grow: 1;
+}
+.grow .box-item:nth-child(2){
+	flex-grow: 2;
+	order: -1;
+}
+
+/* flex-shrink属性定义了项目的缩小比例, 负值无效*/
+.shrink .box-item:nth-child(1){
+	width: 200px;
+	flex-shrink: 0;
+}
+
+/*  align-self,单个项目有与其他项目不一样的对齐方式*/
+.self .box{
+	height: 150px;
+}
+.self .box-item:nth-child(3){
+	align-self: flex-end;
+}
