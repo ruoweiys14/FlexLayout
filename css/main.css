@@ -148,3 +148,20 @@ h2{
 .self .box-item:nth-child(3){
 	align-self: flex-end;
 }
+
+/* 左边固定右边自适应布局 */
+.leftFixed {
+	display: flex;
+	border: 1px solid #ccc;
+	margin: 0 5px;
+	flex-direction: row;
+	height: 100px;
+}
+.leftFixed .left-box{
+	width: 100px;
+	background-color: pink;
+}
+.leftFixed .right-box{
+	flex-grow: 1;
+	background-color: yellow;
+}
